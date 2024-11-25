@@ -1,0 +1,31 @@
+In mysql create 
+
+
+CREATE DATABASE bookstore;
+
+USE bookstore;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    category VARCHAR(100) NOT NULL
+);
+
+INSERT INTO books (title, author, price, category) 
+VALUES ('To Kill a Mockingbird', 'Harper Lee', 9.99, 'Fiction');
+
+go in backend and do node server.js
+change password in db.js
+
+npm install mysql2
+run node server.js
+
+for frontend go in online-bookstore and do npm start
