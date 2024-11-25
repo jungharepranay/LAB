@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <p><strong>Title:</strong> <span th:text="${book.title}"></span></p>
+    <p><strong>Author:</strong> <span th:text="${book.author}"></span></p>
+    <p><strong>Price:</strong> $<span th:text="${book.price}"></span></p>
+
+    <a href="/catalogue">Back to Catalogue</a>
+</body>
+</html>

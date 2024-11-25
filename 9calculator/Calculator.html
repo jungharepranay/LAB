@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+        }
+
+        .display {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .operator {
+            background-color: #28a745;
+        }
+
+        .operator:hover {
+            background-color: #1e7e34;
+        }
+
+        .clear {
+            background-color: #dc3545;
+        }
+
+        .clear:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Calculator</h1>
+    </header>
+
+    <section>
+        <input type="text" id="display" class="display" disabled>
+        <table>
+            <tr>
+                <td><button onclick="clearDisplay()" class="clear">C</button></td>
+                <td><button onclick="deleteCharacter()">←</button></td>
+                <td><button onclick="appendValue('%')" class="operator">%</button></td>
+                <td><button onclick="appendValue('/')" class="operator">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue('7')">7</button></td>
+                <td><button onclick="appendValue('8')">8</button></td>
+                <td><button onclick="appendValue('9')">9</button></td>
+                <td><button onclick="appendValue('*')" class="operator">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue('4')">4</button></td>
+                <td><button onclick="appendValue('5')">5</button></td>
+                <td><button onclick="appendValue('6')">6</button></td>
+                <td><button onclick="appendValue('-')" class="operator">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendValue('1')">1</button></td>
+                <td><button onclick="appendValue('2')">2</button></td>
+                <td><button onclick="appendValue('3')">3</button></td>
+                <td><button onclick="appendValue('+')" class="operator">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="appendValue('0')">0</button></td>
+                <td><button onclick="appendValue('.')">.</button></td>
+                <td><button onclick="calculateResult()" class="operator">=</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>Designed by [Your Name]</p>
+    </footer>
+
+    <script>
+        const display = document.getElementById('display');
+
+        function appendValue(value) {
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function deleteCharacter() {
+            display.value = display.value.slice(0, -1); // Remove the last character
+        }
+
+        function calculateResult() {
+            try {
+                display.value = eval(display.value); // Calculate the result
+            } catch (error) {
+                display.value = 'Error'; // Show error if invalid expression
+            }
+        }
+    </script>
+</body>
+</html>

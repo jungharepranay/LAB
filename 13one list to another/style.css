@@ -1,0 +1,85 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Heading */
+  h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  
+  /* List Container */
+  #list-container {
+    display: flex; /* Align lists side-by-side */
+    justify-content: center; /* Center the lists horizontally */
+    gap: 40px; /* Space between the two lists */
+  }
+  
+  /* List Box Styling */
+  #list-container > div {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align content */
+    width: 200px;
+  }
+  
+  /* List Styling */
+  ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    min-height: 200px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul li {
+    padding: 8px 10px;
+    margin: 5px 0;
+    background-color: #e9ecef;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  ul li:hover {
+    background-color: #dee2e6;
+  }
+  
+  /* Buttons Styling */
+  button {
+    display: block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    background-color: #003f7f;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Align buttons at the bottom of each list */
+  #list-container > div button {
+    width: 100%; /* Make buttons match the list width */
+  }
+  

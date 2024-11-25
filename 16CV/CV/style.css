@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    background-color: rgba(52, 52, 52, 0.46);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    background-color: #00000068;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: xx-large;
+    font-style: oblique;
+}
+
+h2 {
+    color: #b48d33fe;
+}
+
+h3 {
+    color: #000000fe;
+}
+
+h4 {
+    color: #b48d33fe;
+}
+
+h6 {
+    color: #000000fe;
+}
+
+p {
+    color: #5a5a5a;
+    font-size: 80%;
+}
+
+ul {
+    color: #5a5a5a;
+    font-size: 80%;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(84, 64, 64, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

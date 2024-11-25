@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects in VIT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .nav-pills .nav-link {
+            color: #2c3e50;
+            border-radius: 25px;
+            padding: 8px 20px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #3498db;
+            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .nav-pills .nav-link:hover:not(.active) {
+            background-color: #edf2f7;
+        }
+
+        .tab-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+        }
+
+        h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .tab-pane {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">VIT Projects Overview</h1>
+
+        <!-- Navigation Pills -->
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="sdp-tab" data-bs-toggle="pill" data-bs-target="#sdp" type="button" role="tab" aria-controls="sdp" aria-selected="true">
+                    SDP
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="edi-tab" data-bs-toggle="pill" data-bs-target="#edi" type="button" role="tab" aria-controls="edi" aria-selected="false">
+                    EDI
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="dt-tab" data-bs-toggle="pill" data-bs-target="#dt" type="button" role="tab" aria-controls="dt" aria-selected="false">
+                    DT
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="course-tab" data-bs-toggle="pill" data-bs-target="#course" type="button" role="tab" aria-controls="course" aria-selected="false">
+                    Course Projects
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="sdp" role="tabpanel" aria-labelledby="sdp-tab">
+                <h3>Software Development Projects (SDP)</h3>
+                <p>
+                    SDP focuses on building software solutions using advanced programming and development techniques. These projects are aligned with real-world industrial requirements and emphasize collaborative development.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="edi" role="tabpanel" aria-labelledby="edi-tab">
+                <h3>Engineering Design and Innovation (EDI)</h3>
+                <p>
+                    EDI highlights innovative engineering solutions, prototyping, and creative problem-solving approaches. These projects foster critical thinking and emphasize interdisciplinary collaboration.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="dt" role="tabpanel" aria-labelledby="dt-tab">
+                <h3>Design Thinking (DT)</h3>
+                <p>
+                    DT emphasizes understanding user needs and creating human-centered solutions. These projects leverage ideation and iteration to address complex challenges creatively.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="course" role="tabpanel" aria-labelledby="course-tab">
+                <h3>Course Projects</h3>
+                <p>
+                    Course Projects integrate theoretical knowledge with practical applications. They are tailored to specific subjects and help students master core concepts through hands-on learning.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.nav-link').on('click', function () {
+                console.log('Tab changed to:', $(this).text());
+            });
+        });
+    </script>
+</body>
+</html>

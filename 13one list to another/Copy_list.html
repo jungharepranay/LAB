@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Lists with Delete Option</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Editable Lists Demo</h1>
+  
+  <div id="list-container">
+    <!-- List 1 -->
+    <div>
+      <h3>List 1</h3>
+      <ul id="list1"></ul>
+      <button id="add-to-list1">Add to List 1</button>
+      <button id="delete-list1">Delete List 1</button>
+      <button id="copy-to-list2">Copy to List 2</button>
+    </div>
+    
+    <!-- List 2 -->
+    <div>
+      <h3>List 2</h3>
+      <ul id="list2"></ul>
+      <button id="add-new-item">Add New Item</button>
+      <button id="delete-list2">Delete List 2</button>
+      <button id="copy-to-list1">Copy to List 1</button>
+    </div>
+  </div>
+  
+  <script src="list.js"></script>
+</body>
+</html>

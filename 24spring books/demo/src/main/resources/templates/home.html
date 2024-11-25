@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .button-container a {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #0073e6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .button-container a:hover {
+            background-color: #005bb5;
+        }
+
+        .book-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .book-list li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Book Store</h1>
+    </header>
+
+    <div class="button-container">
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </div>
+
+    <div class="book-list">
+        <h2>Available Books</h2>
+        <ul>
+            <li th:each="book : ${books}">
+                <span th:text="${book.title}"></span> by <span th:text="${book.author}"></span> - $<span th:text="${book.price}"></span>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2024 Online Book Store. All rights reserved.
+    </footer>
+</body>
+</html>
