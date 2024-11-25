@@ -1,0 +1,116 @@
+/* Background for the entire page */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for results */
+.results-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title for the results section */
+.results-title {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* No results message */
+.no-results {
+    font-size: 18px;
+    text-align: center;
+    color: #999;
+}
+
+/* Results table styling */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    text-align: left;
+}
+
+/* Table header */
+.results-table thead {
+    background: linear-gradient(135deg, #6d83f2, #ff796b);
+    color: #fff;
+}
+
+.results-table th {
+    padding: 12px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Table body rows */
+.results-table tbody tr {
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.results-table tbody tr:nth-child(odd) {
+    background: #f1f1f1;
+}
+
+/* Row hover effect */
+.results-table tbody tr:hover {
+    background: #f7d1cd;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Table body cells */
+.results-table td {
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .results-container {
+        padding: 20px;
+    }
+
+    .results-title {
+        font-size: 20px;
+    }
+
+    .results-table th,
+    .results-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
